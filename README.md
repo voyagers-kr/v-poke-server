@@ -1,7 +1,7 @@
 # v-poke-server
 [![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/naver/fixture-monkey/blob/main/LICENSE)
 <figure align="center">
-    <img src= "https://cdn.custom-cursor.com/collections/129/cover-pokemon-preview.png" width="100%"/>
+    <img src= "tanguri.jpg" width="100%"/>
 </figure>
 
 ### "If you are a Pokemon lover, always keep it by your terminal"
