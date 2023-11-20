@@ -1,10 +1,10 @@
-### 📌 Summary
+## 📌 Summary
 
 
-### ❗️Issue
+## ❗️Issue
 - Issue Number: N/A
 
-### 📕 What did you work on?
+## 📕 What did you work on?
 - [ ] Bugfix
 - [ ] Feature
 - [ ] Refactoring
@@ -13,14 +13,15 @@
 - [ ] Build and configuration
 - [ ] Other... Please describe:
 
-### 📖 Changes
+## 📖 Changes
 
 
-### ✅ Check list
+## ✅ Check list
 - [ ] Have you modified any environment variables arbitrarily?
 - [ ] Have you deleted unnecessary logs?
 
-### 🧘🏻 Reviewer의 마음가짐
+## 🧘🏻 Reviewer's mindset
+```text
 Reviewers perform the following roles with a “light” mindset:
 - Find typos
 - Ask questions
@@ -29,3 +30,4 @@ Reviewers perform the following roles with a “light” mindset:
 - Make suggestions
 - Is this purpose A? A If the purpose is right, why not try it like this? To this extent, write your own hypothesis and proposal together.
 - Make sure readers can check the information at once, if possible.
+```

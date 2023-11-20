@@ -2,7 +2,7 @@
 name: Bugfix 
 about: Create a bug & errors report to help us improve
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
 
 ---
@@ -15,7 +15,7 @@ assignees: ''
 
 pokemon version:
 
-### ♻️ Steps To Reproduce
+# ♻️ Steps To Reproduce
 1.
 2.
 
@@ -35,12 +35,12 @@ Link to code example:
   example: https://stackoverflow.com/help/mcve.
 -->
 
-### 🛠 The current behavior
+# 🛠 The current behavior
 
 
-### 🎯 The expected behavior
+# 🎯 The expected behavior
 
 
-### 📸 Screenshots
+# 📸 Screenshots
 > If necessary, add screenshots to help explain your problem.
 
