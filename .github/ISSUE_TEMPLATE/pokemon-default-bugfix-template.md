@@ -13,7 +13,7 @@ assignees: ''
   React packages to make sure your issue has not already been fixed.
 -->
 
-pokemon version:
+application version:
 
 # ♻️ Steps To Reproduce
 1.
