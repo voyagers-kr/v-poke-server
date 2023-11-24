@@ -29,9 +29,8 @@ data class ApiResource(
 data class NamedApiResource(
     val name: String,
     val url: String,
-    val names: List<Name>,
 ) : ResourceSummary {
-    constructor(name: String, category: String, id: Int, names: List<Name>) : this(name, resourceUrl(id, category), names)
+    constructor(name: String, category: String, id: Int, names: List<Name>) : this(name, resourceUrl(id, category))
 
     override val category by lazy { urlToCat(url) }
     override val id by lazy { urlToId(url) }

@@ -23,7 +23,7 @@ internal class ApiResourceAdapter : JsonDeserializer<ApiResource> {
 
 internal class NamedApiResourceAdapter : JsonDeserializer<NamedApiResource> {
 
-    data class Json(val name: String, val url: String, val names: List<Name>)
+    data class Json(val name: String, val url: String)
 
     override fun deserialize(
         element: JsonElement,
@@ -31,6 +31,6 @@ internal class NamedApiResourceAdapter : JsonDeserializer<NamedApiResource> {
         context: JsonDeserializationContext
     ): NamedApiResource {
         val temp = context.deserialize<Json>(element, TypeToken.get(Json::class.java).type)
-        return NamedApiResource(temp.name, temp.url, temp.names)
+        return NamedApiResource(temp.name, temp.url)
     }
 }

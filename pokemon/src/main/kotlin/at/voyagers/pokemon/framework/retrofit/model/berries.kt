@@ -1,7 +1,5 @@
 package at.voyagers.pokemon.framework.retrofit.model
 
-import at.voyagers.pokemon.framework.retrofit.model.NamedApiResource
-
 data class Berry(
     val id: Int,
     val name: String,
