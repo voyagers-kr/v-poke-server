@@ -13,16 +13,12 @@ import com.github.ajalt.mordant.rendering.TextStyles
 import com.github.ajalt.mordant.table.Borders
 import com.github.ajalt.mordant.table.table
 import com.github.ajalt.mordant.terminal.Terminal
-import kotlinx.cli.ArgType
-import kotlinx.cli.Subcommand
-import java.lang.Exception
 
 class ReadOne(
     val pokeApiClient: PokeApiClient,
-    val arg: String
-) : Subcommand("info", "포켓몬 상세 조회") {
-//    val arg by argument(ArgType.String, description = "포켓몬 번호 또는 이름")
-    override fun execute() {
+    val arg: String,
+) {
+    fun execute() {
         if (arg.isBlank()) {
             println("please input pokemon name or number")
         }
@@ -80,18 +76,18 @@ class ReadOne(
     private fun requestPokemon(arg: String): Pokemon {
         try {
             return pokeApiClient.getPokemon(arg.toInt())
-        } catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
-        return  pokeApiClient.getPokemon(arg)
+        return pokeApiClient.getPokemon(arg)
     }
 
     private fun requestPokemonSpecies(arg: String): PokemonSpecies {
         try {
             return pokeApiClient.getPokemonSpecies(arg.toInt())
-        } catch (e: Exception){
+        } catch (e: Exception) {
             e.printStackTrace()
         }
-        return  pokeApiClient.getPokemonSpecies(arg)
+        return pokeApiClient.getPokemonSpecies(arg)
     }
 }

@@ -2,6 +2,7 @@ package at.voyagers.pokemon.subcommand.dto
 
 import at.voyagers.pokemon.client.dto.Pokemon
 import at.voyagers.pokemon.client.dto.PokemonSpecies
+import kotlin.math.min
 
 data class ReadOneResponse(
     val number: Int,
@@ -17,11 +18,12 @@ data class ReadOneResponse(
             pokemon: Pokemon,
             pokemonSpecies: PokemonSpecies,
         ): ReadOneResponse {
+            val endIndex = min(pokemon.moves.size, 20)
             return ReadOneResponse(
                 number = pokemon.id,
                 name = pokemon.name,
                 description = "",
-                moves = pokemon.moves.subList(0, 20).map { it.move.name },
+                moves = pokemon.moves.subList(0, endIndex).map { it.move.name },
                 attributes = pokemon.types.map { it.type.name },
                 happinessPoint = pokemonSpecies.baseHappiness,
                 tier = Tier.of(

@@ -11,13 +11,14 @@ class PokemonApplication
 fun main(args: Array<String>) {
     val pokeApiClient = PokeApiClient()
     val numberKrNames = NumberKrNames()
+
     while (true) {
         val input = readLine()
         if (input == "exit") {
             break
         }
         if (input == "ls") {
-            val readAll = ReadAll(pokeApiClient, numberKrNames)
+            val readAll = ReadAll(numberKrNames)
             readAll.execute()
         }
         if (input?.startsWith("info") == true) {
@@ -27,7 +28,7 @@ fun main(args: Array<String>) {
         }
         if (input?.startsWith("name") == true) {
             val pokemonIdentifier = input.split(" ")[1]
-            val callName = CallName(numberKrNames, pokemonIdentifier.toInt())
+            val callName = CallName(numberKrNames, pokemonIdentifier)
             callName.execute()
         }
     }

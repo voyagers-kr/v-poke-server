@@ -2,11 +2,11 @@ package at.voyagers.pokemon.subcommand
 
 class CallName(
     val numberKrNames: NumberKrNames,
-    val number: Int,
+    val name: String,
 ) {
 
     fun execute() {
-        val findPokemon = numberKrNames.findPokemon(number)
-        print("$number-$findPokemon")
+        val number = numberKrNames.findPokemon(name)
+        print("$number $name")
     }
 }
