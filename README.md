@@ -25,7 +25,7 @@ npm i v-poke
 ## How to use
 * Holding list
     ```bash
-    v-poke -s
+    v-poke --start
     ```
 * View the Encyclopedia
     ```bash
