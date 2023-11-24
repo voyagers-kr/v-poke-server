@@ -1,4 +1,4 @@
-package at.voyagers.pokemon.subcommand
+package at.voyagers.pokemon.api
 
 class NumberKrNames(
     val map: Map<Int, String> = mapOf(

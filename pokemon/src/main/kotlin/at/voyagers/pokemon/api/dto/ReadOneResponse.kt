@@ -1,4 +1,4 @@
-package at.voyagers.pokemon.subcommand.dto
+package at.voyagers.pokemon.api.dto
 
 import at.voyagers.pokemon.client.dto.Pokemon
 import at.voyagers.pokemon.client.dto.PokemonSpecies

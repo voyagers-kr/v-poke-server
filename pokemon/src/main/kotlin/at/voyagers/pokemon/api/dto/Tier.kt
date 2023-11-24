@@ -1,4 +1,4 @@
-package at.voyagers.pokemon.subcommand.dto
+package at.voyagers.pokemon.api.dto
 
 enum class Tier(
     val krDisplayName: String,

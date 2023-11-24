@@ -1,4 +1,4 @@
-package at.voyagers.pokemon.subcommand
+package at.voyagers.pokemon.api
 
 class CallName(
     val numberKrNames: NumberKrNames,

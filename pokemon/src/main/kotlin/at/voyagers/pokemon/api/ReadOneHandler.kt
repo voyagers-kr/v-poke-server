@@ -1,9 +1,9 @@
-package at.voyagers.pokemon.subcommand
+package at.voyagers.pokemon.api
 
 import at.voyagers.pokemon.client.PokeApiClient
 import at.voyagers.pokemon.client.dto.Pokemon
 import at.voyagers.pokemon.client.dto.PokemonSpecies
-import at.voyagers.pokemon.subcommand.dto.ReadOneResponse
+import at.voyagers.pokemon.api.dto.ReadOneResponse
 import com.github.ajalt.mordant.rendering.BorderType.Companion.SQUARE_DOUBLE_SECTION_SEPARATOR
 import com.github.ajalt.mordant.rendering.TextAlign
 import com.github.ajalt.mordant.rendering.TextColors
@@ -14,10 +14,10 @@ import com.github.ajalt.mordant.table.Borders
 import com.github.ajalt.mordant.table.table
 import com.github.ajalt.mordant.terminal.Terminal
 
-class ReadOne(
+class ReadOneHandler(
     val pokeApiClient: PokeApiClient,
     val arg: String,
-) {
+) : RequestMappingHandler {
     fun execute() {
         if (arg.isBlank()) {
             println("please input pokemon name or number")
@@ -89,5 +89,9 @@ class ReadOne(
             e.printStackTrace()
         }
         return pokeApiClient.getPokemonSpecies(arg)
+    }
+
+    override fun support(input: String): Boolean {
+        return input.startsWith("name")
     }
 }

@@ -1,3 +1,3 @@
-package at.voyagers.pokemon.subcommand.dto
+package at.voyagers.pokemon.api.dto
 
 data class ReadAllResponse(val number: Int, val name: String)
