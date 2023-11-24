@@ -18,9 +18,10 @@ import kotlinx.cli.Subcommand
 import java.lang.Exception
 
 class ReadOne(
-    val pokeApiClient: PokeApiClient
-) : Subcommand("get", "포켓몬 상세 조회") {
-    val arg by argument(ArgType.String, description = "포켓몬 번호 또는 이름")
+    val pokeApiClient: PokeApiClient,
+    val arg: String
+) : Subcommand("info", "포켓몬 상세 조회") {
+//    val arg by argument(ArgType.String, description = "포켓몬 번호 또는 이름")
     override fun execute() {
         if (arg.isBlank()) {
             println("please input pokemon name or number")
