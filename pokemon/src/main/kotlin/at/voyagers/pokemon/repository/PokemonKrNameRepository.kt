@@ -1,6 +1,6 @@
-package at.voyagers.pokemon.api
+package at.voyagers.pokemon.repository
 
-class NumberKrNames(
+class PokemonKrNameRepository(
     val map: Map<Int, String> = mapOf(
         1 to "이상해씨",
         2 to "이상해풀",

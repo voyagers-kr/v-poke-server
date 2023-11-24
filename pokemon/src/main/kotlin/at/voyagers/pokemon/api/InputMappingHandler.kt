@@ -1,5 +1,6 @@
 package at.voyagers.pokemon.api
 
-interface RequestMappingHandler {
+interface InputMappingHandler {
     fun support(input: String): Boolean
+    fun execute(vararg args: String)
 }

@@ -16,9 +16,13 @@ import com.github.ajalt.mordant.terminal.Terminal
 
 class ReadOneHandler(
     val pokeApiClient: PokeApiClient,
-    val arg: String,
-) : RequestMappingHandler {
-    fun execute() {
+) : InputMappingHandler {
+    override fun support(input: String): Boolean {
+        return input.startsWith("name")
+    }
+
+    override fun execute(vararg args: String) {
+        val arg = args[0]
         if (arg.isBlank()) {
             println("please input pokemon name or number")
         }
@@ -89,9 +93,5 @@ class ReadOneHandler(
             e.printStackTrace()
         }
         return pokeApiClient.getPokemonSpecies(arg)
-    }
-
-    override fun support(input: String): Boolean {
-        return input.startsWith("name")
     }
 }
