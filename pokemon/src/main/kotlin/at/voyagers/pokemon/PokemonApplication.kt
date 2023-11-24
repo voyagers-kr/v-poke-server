@@ -1,10 +1,7 @@
 package at.voyagers.pokemon
 
 import at.voyagers.pokemon.client.PokeApiClient
-import at.voyagers.pokemon.subcommand.CallName
-import at.voyagers.pokemon.subcommand.NumberKrNames
-import at.voyagers.pokemon.subcommand.ReadAll
-import at.voyagers.pokemon.subcommand.ReadOne
+import at.voyagers.pokemon.subcommand.*
 
 class PokemonApplication
 
@@ -30,6 +27,11 @@ fun main(args: Array<String>) {
             val pokemonIdentifier = input.split(" ")[1]
             val callName = CallName(numberKrNames, pokemonIdentifier)
             callName.execute()
+        }
+        if (input?.startsWith("number") == true) {
+            val pokemonIdentifier = input.split(" ")[1]
+            val callNumber = CallNumber(numberKrNames, pokemonIdentifier)
+            callNumber.execute()
         }
     }
 }
