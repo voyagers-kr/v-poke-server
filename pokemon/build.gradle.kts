@@ -35,3 +35,26 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
+
+tasks.withType<Jar> {
+    enabled = true
+    isZip64 = true
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes["Main-Class"] = "at.voyagers.pokemon.PokemonApplicationKt"
+    }
+
+    archiveFileName.set("${project.name}.jar")
+
+    from(sourceSets.main.get().output)
+    dependsOn(configurations.compileClasspath)
+    from({
+        configurations.compileClasspath.get().filter {
+            it.name.endsWith("jar")
+        }.map { zipTree(it) }
+    }) {
+        exclude("META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA")
+    }
+}
