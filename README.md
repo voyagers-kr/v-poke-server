@@ -19,21 +19,21 @@ You can learn about the strengths, weaknesses, and history of a Pokémon by look
 
 ## Download
 ```bash
-npm i v-pokemon
+npm i v-poke
 ```
 
 ## How to use
 * Holding list
     ```bash
-    v-pokemon list
+    v-poke -s
     ```
 * View the Encyclopedia
     ```bash
-    v-pokemon squirtle
+    v-poke info squirtle
     ```
 * Quiz
     ```bash
-    v-pokemon quiz
+    v-poke quiz
     ```
 
 
