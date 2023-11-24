@@ -4,5 +4,4 @@ class PokemonApplicationTests {
 
     fun contextLoads() {
     }
-
 }

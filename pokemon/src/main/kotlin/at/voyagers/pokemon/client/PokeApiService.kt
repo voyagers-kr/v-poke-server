@@ -553,6 +553,9 @@ internal interface PokeApiService {
     @GET("pokemon/{id}/")
     fun getPokemon(@Path("id") id: Int): Call<Pokemon>
 
+    @GET("pokemon/{name}/")
+    fun getPokemon(@Path("name") name: String): Call<Pokemon>
+
     @GET("pokemon/{id}/encounters/")
     fun getPokemonEncounterList(@Path("id") id: Int): Call<List<LocationAreaEncounter>>
 
@@ -570,6 +573,9 @@ internal interface PokeApiService {
 
     @GET("pokemon-species/{id}/")
     fun getPokemonSpecies(@Path("id") id: Int): Call<PokemonSpecies>
+
+    @GET("pokemon-species/{name}/")
+    fun getPokemonSpecies(@Path("name") id: String): Call<PokemonSpecies>
 
     @GET("stat/{id}/")
     fun getStat(@Path("id") id: Int): Call<Stat>

@@ -3,7 +3,7 @@ package at.voyagers.pokemon.client
 import retrofit2.Call
 
 class PokeApiClient(
-    clientConfig: ClientConfig = ClientConfig()
+    clientConfig: ClientConfig = ClientConfig(),
 ) : PokeApi {
 
     private val service = PokeApiServiceImpl(clientConfig)
@@ -321,6 +321,8 @@ class PokeApiClient(
 
     override fun getPokemon(id: Int) = service.getPokemon(id).result()
 
+    override fun getPokemon(name: String) = service.getPokemon(name).result()
+
     override fun getPokemonEncounterList(id: Int) = service.getPokemonEncounterList(id).result()
 
     override fun getPokemonColor(id: Int) = service.getPokemonColor(id).result()
@@ -332,6 +334,8 @@ class PokeApiClient(
     override fun getPokemonShape(id: Int) = service.getPokemonShape(id).result()
 
     override fun getPokemonSpecies(id: Int) = service.getPokemonSpecies(id).result()
+
+    override fun getPokemonSpecies(name: String) = service.getPokemonSpecies(name).result()
 
     override fun getStat(id: Int) = service.getStat(id).result()
 

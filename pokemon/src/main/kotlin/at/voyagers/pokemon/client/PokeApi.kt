@@ -1,56 +1,6 @@
 package at.voyagers.pokemon.client
 
-import at.voyagers.pokemon.client.dto.Ability
-import at.voyagers.pokemon.client.dto.ApiResourceList
-import at.voyagers.pokemon.client.dto.Berry
-import at.voyagers.pokemon.client.dto.BerryFirmness
-import at.voyagers.pokemon.client.dto.BerryFlavor
-import at.voyagers.pokemon.client.dto.Characteristic
-import at.voyagers.pokemon.client.dto.ContestEffect
-import at.voyagers.pokemon.client.dto.ContestType
-import at.voyagers.pokemon.client.dto.EggGroup
-import at.voyagers.pokemon.client.dto.EncounterCondition
-import at.voyagers.pokemon.client.dto.EncounterConditionValue
-import at.voyagers.pokemon.client.dto.EncounterMethod
-import at.voyagers.pokemon.client.dto.EvolutionChain
-import at.voyagers.pokemon.client.dto.EvolutionTrigger
-import at.voyagers.pokemon.client.dto.Gender
-import at.voyagers.pokemon.client.dto.Generation
-import at.voyagers.pokemon.client.dto.GrowthRate
-import at.voyagers.pokemon.client.dto.Item
-import at.voyagers.pokemon.client.dto.ItemAttribute
-import at.voyagers.pokemon.client.dto.ItemCategory
-import at.voyagers.pokemon.client.dto.ItemFlingEffect
-import at.voyagers.pokemon.client.dto.ItemPocket
-import at.voyagers.pokemon.client.dto.Language
-import at.voyagers.pokemon.client.dto.Location
-import at.voyagers.pokemon.client.dto.LocationArea
-import at.voyagers.pokemon.client.dto.LocationAreaEncounter
-import at.voyagers.pokemon.client.dto.Machine
-import at.voyagers.pokemon.client.dto.Move
-import at.voyagers.pokemon.client.dto.MoveAilment
-import at.voyagers.pokemon.client.dto.MoveBattleStyle
-import at.voyagers.pokemon.client.dto.MoveCategory
-import at.voyagers.pokemon.client.dto.MoveDamageClass
-import at.voyagers.pokemon.client.dto.MoveLearnMethod
-import at.voyagers.pokemon.client.dto.MoveTarget
-import at.voyagers.pokemon.client.dto.NamedApiResourceList
-import at.voyagers.pokemon.client.dto.Nature
-import at.voyagers.pokemon.client.dto.PalParkArea
-import at.voyagers.pokemon.client.dto.PokeathlonStat
-import at.voyagers.pokemon.client.dto.Pokedex
-import at.voyagers.pokemon.client.dto.Pokemon
-import at.voyagers.pokemon.client.dto.PokemonColor
-import at.voyagers.pokemon.client.dto.PokemonForm
-import at.voyagers.pokemon.client.dto.PokemonHabitat
-import at.voyagers.pokemon.client.dto.PokemonShape
-import at.voyagers.pokemon.client.dto.PokemonSpecies
-import at.voyagers.pokemon.client.dto.Region
-import at.voyagers.pokemon.client.dto.Stat
-import at.voyagers.pokemon.client.dto.SuperContestEffect
-import at.voyagers.pokemon.client.dto.Type
-import at.voyagers.pokemon.client.dto.Version
-import at.voyagers.pokemon.client.dto.VersionGroup
+import at.voyagers.pokemon.client.dto.*
 
 interface PokeApi {
 
@@ -230,6 +180,8 @@ interface PokeApi {
 
     fun getPokemon(id: Int): Pokemon
 
+    fun getPokemon(name: String): Pokemon
+
     fun getPokemonEncounterList(id: Int): List<LocationAreaEncounter>
 
     fun getPokemonColor(id: Int): PokemonColor
@@ -241,6 +193,8 @@ interface PokeApi {
     fun getPokemonShape(id: Int): PokemonShape
 
     fun getPokemonSpecies(id: Int): PokemonSpecies
+
+    fun getPokemonSpecies(name: String): PokemonSpecies
 
     fun getStat(id: Int): Stat
 

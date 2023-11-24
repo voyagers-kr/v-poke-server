@@ -20,9 +20,10 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3.6")
-    api("com.squareup.retrofit2:retrofit:2.8.1")
-    api("com.squareup.retrofit2:converter-gson:2.8.1")
-    api("com.squareup.retrofit2:adapter-rxjava:2.8.1")
+    implementation("com.squareup.retrofit2:retrofit:2.8.1")
+    implementation("com.squareup.retrofit2:converter-gson:2.8.1")
+    implementation("com.squareup.retrofit2:adapter-rxjava:2.8.1")
+    implementation("com.github.ajalt.mordant:mordant:2.2.0")
 }
 
 tasks.withType<KotlinCompile> {
