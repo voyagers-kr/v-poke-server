@@ -25,7 +25,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    api("com.squareup.retrofit2:retrofit:2.8.1")
+    api("com.squareup.retrofit2:converter-gson:2.8.1")
+    api("com.squareup.retrofit2:adapter-rxjava:2.8.1")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    runtimeOnly("com.h2database:h2")
 }
 
 allOpen {

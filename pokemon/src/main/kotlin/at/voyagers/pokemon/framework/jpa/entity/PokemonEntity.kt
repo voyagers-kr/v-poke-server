@@ -11,17 +11,22 @@ import jakarta.persistence.Table
 @Entity
 class PokemonEntity(
     override val type: String,
+    override val number: String,
     override val name: String,
     override val height: Int,
     override val weight: Int,
     override val gender: String,
     override val classification: String,
     override val specificity: String,
-    override val image: String
+    override var image: String,
 ) : Pokemon {
-    
+
     @Id
     @GeneratedValue(strategy = IDENTITY)
     override val id: Long = 0
+
+    override fun updateImage(image: String) {
+        this.image = image
+    }
 
 }
